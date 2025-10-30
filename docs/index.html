@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Lintang Angrenggani Kusuma Ratri</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portofolio.html">Portofolio</a></li>
+                        <li><a href="form.html">Form</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="lintang-pic">
+                    <img src="assets/gambar sendiri.jpeg" alt="profile-pic">
+                </div>
+                <div class="hero-text"> 
+                    <h5>Hello <span class="input">Welcome to My World</span></h5>
+                    <h1>Lintang Angrenggani Kusuma Ratri</h1>
+                    <p>I’m an Informatics Engineering student at Institut Teknologi PLN (ITPLN) who’s always curious about how technology shapes the world. I enjoy exploring new ideas, working with great people, and bringing creative solutions to life.</p>
+                    <p>I’m the kind of person who loves teamwork, learns fast, and never hesitates to take responsibility. For me, every challenge is just another chance to grow and have fun doing it! 🚀</p>
+                    <div class="btn-group">
+                        <a href="assets/CV Lintang Angrenggani Kusuma R.pdf" class="btn active">Download CV</a>
+                        <a href="https://wa.me/082323786505" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/lintang.aa_?igsh=ODIxbnhmY2cwbHF0&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/lintangangrenggani?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/pgnberantem?s=21&t=9egM9QY8kPmcSS2lDVRkaQ"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        // Toggle menu hamburger
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        // Menambahkan event listener untuk toggle menu
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");  // Mengubah hamburger menjadi silang (X)
+            nav.classList.toggle("open");    // Menampilkan atau menyembunyikan menu
+        });
+
+        // Initialize Typed.js
+        var typed = new Typed(".input", {
+            strings: ["Welcome to My World!", "Get to Know Me!", "This Is Me!"],
+            typeSpeed: 70,
+            loop: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="portofolio.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Lintang Angrenggani Kusuma Ratri</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portofolio.html">Portofolio</a></li>
+                        <li><a href="form.html">Form</a></li>
+                    </ul>
+                </nav>
+            </header>
+    <!-- Hero Section -->
+    <section class="heroo">
+        <div class="wrapperr">
+            <div class="hero-text">
+                <h1>Portofolio Lintang Angrenggani</h1>
+                <p>Berikut adalah proyek-proyek yang telah saya kerjakan, yang mencakup berbagai teknologi dan solusi yang saya tawarkan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="wrapper">
+            <h2>Daftar Proyek</h2>
+            <div class="table-responsive">
+                <table class="portfolio-table">
+                    <thead>
+                        <tr>
+                            <th>Nama Proyek</th>
+                            <th>Tahun Pembuatan</th>
+                            <th>Teknologi yang Digunakan</th>
+                            <th>Status</th>
+                            <th>Link Demo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data Project 1 -->
+                        <tr>
+                            <td>Website E-Commerce</td>
+                            <td>2024</td>
+                            <td>HTML, CSS, JavaScript, React</td>
+                            <td>Selesai</td>
+                            <td><a href="#" target="_blank">Demo</a></td>
+                        </tr>
+                        <!-- Data Project 2 -->
+                        <tr>
+                            <td>Aplikasi Mobile</td>
+                            <td>2023</td>
+                            <td>Flutter, Dart</td>
+                            <td>Belum</td>
+                            <td><a href="#" target="_blank">Demo</a></td>
+                        </tr>
+                        <!-- Data Project 3 -->
+                        <tr>
+                            <td>Sistem Manajemen Inventaris</td>
+                            <td>2023</td>
+                            <td>Laravel, MySQL</td>
+                            <td>Selesai</td>
+                            <td><a href="#" target="_blank">Demo</a></td>
+                        </tr>
+                        <!-- Data Project 4 -->
+                        <tr>
+                            <td>Web App Chatbot</td>
+                            <td>2022</td>
+                            <td>Node.js, Express, MongoDB</td>
+                            <td>Selesai</td>
+                            <td><a href="#" target="_blank">Demo</a></td>
+                        </tr>
+                        <!-- Data Project 5 -->
+                        <tr>
+                            <td>Dashboard Admin</td>
+                            <td>2023</td>
+                            <td>Vue.js, Firebase</td>
+                            <td>Belum</td>
+                            <td><a href="#" target="_blank">Demo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer class="footer-full">
+    <p>&copy; 2025 Lintang Angrenggani K | 
+        <a href="https://www.itpln.ac.id" target="_blank">Visit ITPLN</a>
+    </p>
+</footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        // Toggle menu hamburger
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        // Menambahkan event listener untuk toggle menu
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");  // Mengubah hamburger menjadi silang (X)
+            nav.classList.toggle("open");    // Menampilkan atau menyembunyikan menu
+        });
+    </script>
+</body>
+</html>

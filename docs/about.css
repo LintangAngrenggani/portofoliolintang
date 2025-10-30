@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+/* Body */
+body {
+    background-color: #222;
+    color: aliceblue;
+    font-size: 16px;
+}
+
+/* Hero Header */
+.hero-header {
+    width: 100%;
+    min-height: 100vh;
+    background: #222;
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+     padding-bottom: 10px;
+}
+
+/* Logo */
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: darkmagenta;
+    border-radius: 50%;
+    color: ghostwhite;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+/* Toggle button untuk menu hamburger */
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 20px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: blueviolet;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+/* Animasi Hamburger ke silang (X) */
+nav .togglebtn.click span:nth-child(1) {
+    transform: rotate(-40deg) translate(-5px, 6px);
+}
+
+nav .togglebtn.click span:nth-child(2) {
+    opacity: 0;
+}
+
+nav .togglebtn.click span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Menu navigasi */
+nav .navlinks {
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    margin-left: 2.5rem; /* Space between links */
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+/* Menu dropdown responsif (mobile) */
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: block;  /* Tampilkan tombol hamburger */
+    }
+
+    nav .navlinks {
+        position: absolute;
+        top: 0;
+        right: -100%; /* Awalnya sembunyi di kanan */
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: -5px 13px 30px rgba(0, 0, 0, 0.7); /* Bayangan ke kiri */
+        padding: 50px 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav .navlinks.open {
+        right: 0; /* Muncul dari kanan saat diklik */
+    }
+
+
+    nav .navlinks li {
+        display: block;
+        margin-top: 25px;
+        padding: 10px;
+    }
+
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: aliceblue;
+    }
+}
+/* Hero Section */
+.heroo {
+    width: 100%;
+    min-height: 75vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1s ease-out;
+        padding-top: 10px; /* Supaya foto lebih dekat */
+    margin-top: 0; /* Pastikan tidak ada jarak tambahan */
+}
+
+.wrapperr {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* Container untuk Hero */
+.containerr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideIn 1s ease-out;
+}
+
+.lintang-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 5);
+    margin: 0 auto;
+}
+
+.lintang-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.lintang-pic img:hover {
+    transform: scale(1.2); /* Efek zoom pada hover */
+}
+
+/* Teks Hero */
+.hero-text {
+    max-width: 500px;
+    color: aliceblue;
+    animation: fadeInUpText 1.5s ease-out;
+}
+
+.hero-text h1 {
+    color: darkmagenta;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* About Me Section */
+#about-me {
+    padding: 60px 20px;
+    background-color: #333;
+    animation: fadeInUp 1s ease-out;
+}
+
+#about-me h2 {
+    color: darkmagenta;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#about-me p {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background-color: #222;
+    animation: fadeInUp 1s ease-out;
+}
+
+#skills h2 {
+    color: darkmagenta;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.hero-header {
+    min-height: auto;
+    padding-bottom: 0;
+}
+
+
+.skill {
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInSkill 1.5s ease-out forwards;
+}
+
+.progress-bar {
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: blueviolet;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Back to Home Button */
+.back-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button {
+    text-decoration: none;
+    background-color: #444;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #555;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: darkmagenta;
+    transition: background-color 0.3s ease;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+    width: 100vw;
+      position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+footer a {
+    color: darkmagenta;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk Hero Image */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animasi untuk Hero Text */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk Hero Text (Slide in) */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animasi untuk progress bar */
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+/* Animasi untuk skill entry */
+@keyframes fadeInSkill {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* **Desktop Layout** */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .lintang-pic {
+        margin: 0 30px;
+    }
+
+    #skills .skills-container {
+        justify-content: space-between;
+    }
+}
+
+/* **Mobile Layout** */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    #skills .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+}
+#about-me,
+#skills {
+    width: 100vw; /* lebar penuh layar */
+    margin-left: calc(-50vw + 50%); /* hilangkan margin otomatis dari wrapper */
+    padding: 60px 0; /* beri ruang atas bawah tapi tanpa kiri-kanan */
+}
+#about-me .wrapper,
+#skills .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

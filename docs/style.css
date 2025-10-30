@@ -1,0 +1,298 @@
+/* Reset untuk margin dan padding */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+/* Body */
+body {
+    background-color: #222;
+    color: aliceblue;
+    font-size: 16px;
+}
+
+/* Hero Header */
+.hero-header {
+    width: 100%;
+    min-height: 100vh;
+    background: #222;
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: darkmagenta;
+    border-radius: 50%;
+    color: ghostwhite;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+/* Toggle button untuk menu hamburger */
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 20px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: blueviolet;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+/* Animasi Hamburger ke silang (X) */
+nav .togglebtn.click span:nth-child(1) {
+    transform: rotate(-40deg) translate(-5px, 6px);
+}
+
+nav .togglebtn.click span:nth-child(2) {
+    opacity: 0;
+}
+
+nav .togglebtn.click span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Menu navigasi */
+nav .navlinks {
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    margin-left: 2.5rem; /* Space between links */
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+/* Menu dropdown responsif (mobile) */
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: block;  /* Tampilkan tombol hamburger */
+    }
+
+    nav .navlinks {
+        position: absolute;
+        top: 0;
+        right: -100%; /* Awalnya sembunyi di kanan */
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: -5px 13px 30px rgba(0, 0, 0, 0.7); /* Bayangan ke kiri */
+        padding: 50px 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav .navlinks.open {
+        right: 0; /* Muncul dari kanan saat diklik */
+    }
+
+
+    nav .navlinks li {
+        display: block;
+        margin-top: 25px;
+        padding: 10px;
+    }
+
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: aliceblue;
+    }
+}
+
+/* Bagian Hero (gambar dan teks) */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .lintang-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 5);
+    margin: 0 auto;
+}
+
+/* Efek gambar */
+.lintang-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.lintang-pic img:hover {
+    transform: scale(1.2); /* Efek zoom pada hover */
+}
+
+/* Teks hero */
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h5 span {
+    color: aliceblue;
+    font-size: 14px;
+}
+
+.hero-text h5 span {
+    color: darkmagenta;
+    font-size: 16px;
+}
+
+.hero-text h1 {
+    color: darkmagenta;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: aliceblue;
+}
+
+/* Tombol */
+.btn-group {
+    margin: 45px 0;
+}
+
+.btn-group .btn {
+    border-color: aliceblue;
+    color: #fff;
+    background-color: #444;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid aliceblue;
+    box-sizing: border-box;
+}
+
+.btn.active {
+    border-color: darkmagenta;
+}
+
+/* Icon media sosial */
+.hero-text .social i {
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.hero-text .social i:hover {
+    color: darkmagenta;
+    transform: rotate(360deg);
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+footer a {
+    color: darkmagenta;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivitas untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding: 40px 0px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; 
+    }
+
+    .hero-text p {
+        font-size: 0.9rem; 
+    }
+
+    .btn-group .btn {
+        padding: 10px 20px; 
+    }
+
+    .lintang-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text .social {
+        text-align: center;
+    }
+}
